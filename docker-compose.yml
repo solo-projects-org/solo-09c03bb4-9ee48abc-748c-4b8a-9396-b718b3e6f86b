@@ -1,0 +1,16 @@
+services:
+  imagery-api:
+    build: .
+    image: orthophoto-takedown:latest
+    container_name: orthophoto-takedown
+    ports:
+      - "8000:8000"
+    environment:
+      IMAGERY_DB_PATH: /data/imagery.db
+      IMAGERY_CATALOG_PATH: /data/catalog.json
+      IMAGERY_BUSY_TIMEOUT_MS: "8000"
+    volumes:
+      # Supply directory only: the JSON catalog is read, only the SQLite
+      # database (imagery.db) is written. Image files are never touched.
+      - ./data:/data
+    restart: unless-stopped

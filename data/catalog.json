@@ -1,0 +1,141 @@
+{
+  "crs": "EPSG:32650",
+  "units": "metre",
+  "period": "2024Q3",
+  "description": "Orthophoto catalog for the take-down service. bbox is [min_x, min_y, max_x, max_y] in the CRS above; resolution_mpp is metres per pixel (smaller = finer).",
+  "images": [
+    {
+      "sheet_no": "ORTHO-001",
+      "period": "2024Q3",
+      "bbox": [500000, 3000000, 502000, 3002000],
+      "resolution_mpp": 0.5,
+      "file_path": "/data/tiles/ORTHO-001.tif",
+      "note": "2km square at 0.5 m/px; fully covered by finer ORTHO-002 + ORTHO-003 -> removable"
+    },
+    {
+      "sheet_no": "ORTHO-002",
+      "period": "2024Q3",
+      "bbox": [500000, 3000000, 501000, 3002000],
+      "resolution_mpp": 0.25,
+      "file_path": "/data/tiles/ORTHO-002.tif",
+      "note": "left half of ORTHO-001, finer"
+    },
+    {
+      "sheet_no": "ORTHO-003",
+      "period": "2024Q3",
+      "bbox": [501000, 3000000, 502000, 3002000],
+      "resolution_mpp": 0.25,
+      "file_path": "/data/tiles/ORTHO-003.tif",
+      "note": "right half of ORTHO-001, finer"
+    },
+    {
+      "sheet_no": "ORTHO-004",
+      "period": "2024Q3",
+      "bbox": [503000, 3000000, 504000, 3001000],
+      "resolution_mpp": 0.5,
+      "file_path": "/data/tiles/ORTHO-004.tif",
+      "note": "only overlap from ORTHO-005 leaves a gap -> not removable"
+    },
+    {
+      "sheet_no": "ORTHO-005",
+      "period": "2024Q3",
+      "bbox": [503500, 3000000, 504000, 3001000],
+      "resolution_mpp": 0.25,
+      "file_path": "/data/tiles/ORTHO-005.tif",
+      "note": "covers only the eastern half of ORTHO-004"
+    },
+    {
+      "sheet_no": "ORTHO-006",
+      "period": "2024Q3",
+      "bbox": [510000, 3000000, 511000, 3001000],
+      "resolution_mpp": 0.5,
+      "file_path": "/data/tiles/ORTHO-006.tif",
+      "note": "coarser candidate; only coverer ORTHO-007 is coarser -> fails resolution rule"
+    },
+    {
+      "sheet_no": "ORTHO-007",
+      "period": "2024Q3",
+      "bbox": [510000, 3000000, 511000, 3001000],
+      "resolution_mpp": 1.0,
+      "file_path": "/data/tiles/ORTHO-007.tif",
+      "note": "same footprint as ORTHO-006 but 1 m/px, too coarse to replace it"
+    },
+    {
+      "sheet_no": "ORTHO-008",
+      "period": "2024Q3",
+      "bbox": [520000, 3000000, 521000, 3001000],
+      "resolution_mpp": 0.5,
+      "file_path": "/data/tiles/ORTHO-008.tif",
+      "note": "identical footprint as finer ORTHO-009 -> removable"
+    },
+    {
+      "sheet_no": "ORTHO-009",
+      "period": "2024Q3",
+      "bbox": [520000, 3000000, 521000, 3001000],
+      "resolution_mpp": 0.25,
+      "file_path": "/data/tiles/ORTHO-009.tif"
+    },
+    {
+      "sheet_no": "ORTHO-010",
+      "period": "2024Q3",
+      "bbox": [530000, 3000000, 531000, 3001000],
+      "resolution_mpp": 0.5,
+      "file_path": "/data/tiles/ORTHO-010.tif",
+      "note": "removable together with ORTHO-011 only; neither alone is covered"
+    },
+    {
+      "sheet_no": "ORTHO-011",
+      "period": "2024Q3",
+      "bbox": [530000, 3000000, 531000, 3001000],
+      "resolution_mpp": 0.5,
+      "file_path": "/data/tiles/ORTHO-011.tif",
+      "note": "duplicate of ORTHO-010; the two can be withdrawn in one batch while ORTHO-012 survives"
+    },
+    {
+      "sheet_no": "ORTHO-012",
+      "period": "2024Q3",
+      "bbox": [530000, 3000000, 531000, 3001000],
+      "resolution_mpp": 0.25,
+      "file_path": "/data/tiles/ORTHO-012.tif"
+    },
+    {
+      "sheet_no": "ORTHO-013",
+      "period": "2024Q3",
+      "bbox": [540000, 3000000, 542000, 3002000],
+      "resolution_mpp": 0.5,
+      "file_path": "/data/tiles/ORTHO-013.tif",
+      "note": "union cover with an interior hole: ORTHO-014 leaves the centre band uncovered"
+    },
+    {
+      "sheet_no": "ORTHO-014",
+      "period": "2024Q3",
+      "bbox": [540000, 3000000, 542000, 3000500],
+      "resolution_mpp": 0.25,
+      "file_path": "/data/tiles/ORTHO-014.tif",
+      "note": "finer but only a 500 m strip; a second strip below would still leave a gap"
+    },
+    {
+      "sheet_no": "ORTHO-015",
+      "period": "2024Q3",
+      "bbox": [540000, 3001500, 542000, 3002000],
+      "resolution_mpp": 0.25,
+      "file_path": "/data/tiles/ORTHO-015.tif",
+      "note": "finer bottom strip; together with ORTHO-014 a 1000 m hole remains"
+    },
+    {
+      "sheet_no": "ORTHO-016",
+      "period": "2024Q3",
+      "bbox": [550000, 3000000, 551000, 3001000],
+      "resolution_mpp": 0.5,
+      "file_path": "/data/tiles/ORTHO-016.tif",
+      "note": "non-aligned edge: ORTHO-017 stops 100 m short -> gap rectangle reported"
+    },
+    {
+      "sheet_no": "ORTHO-017",
+      "period": "2024Q3",
+      "bbox": [550000, 3000000, 550900, 3001000],
+      "resolution_mpp": 0.25,
+      "file_path": "/data/tiles/ORTHO-017.tif"
+    }
+  ]
+}
