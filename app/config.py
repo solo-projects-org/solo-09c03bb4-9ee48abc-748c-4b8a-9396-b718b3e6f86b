@@ -30,3 +30,6 @@ BUSY_TIMEOUT_MS = int(os.environ.get("IMAGERY_BUSY_TIMEOUT_MS", "8000"))
 
 # Guard against pathological catalogs producing enormous grids.
 MAX_GRID_CELLS = int(os.environ.get("IMAGERY_MAX_GRID_CELLS", "2000000"))
+
+# Request safety limit for image-selection manifests.
+MAX_MANIFEST_TILES = int(os.environ.get("IMAGERY_MAX_MANIFEST_TILES", "1000"))

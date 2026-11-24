@@ -9,8 +9,12 @@ services:
       IMAGERY_DB_PATH: /data/imagery.db
       IMAGERY_CATALOG_PATH: /data/catalog.json
       IMAGERY_BUSY_TIMEOUT_MS: "8000"
+      IMAGERY_MAX_MANIFEST_TILES: "1000"
     volumes:
       # Supply directory only: the JSON catalog is read, only the SQLite
       # database (imagery.db) is written. Image files are never touched.
       - ./data:/data
+      # Uncomment to demo manifest review against the changed release
+      # (path/resolution changes, one removal, one addition):
+      # - ./data/catalog_v2.json:/data/catalog.json:ro
     restart: unless-stopped
